@@ -5,13 +5,13 @@
 # ==============================================================================
 # 要搜索的ArXiv类别，用逗号分隔
 # 例如: "cs.AI,cs.LG,cs.CL"
-CATEGORIES: "cs.CV,cs.AI"
+CATEGORIES: "cs.CV,cs.AI,cs.CL"
 
 # 每个类别最多获取的论文数量
-MAX_PAPERS: 1000
+MAX_PAPERS: 100
 
 # 搜索最近几天的论文（设置为1表示只查询今天，周末通过cron自动停止）
-SEARCH_DAYS: 365
+SEARCH_DAYS: 1
 
 # ==============================================================================
 # AI分析配置 (AI Analysis Configuration)
@@ -20,7 +20,7 @@ SEARCH_DAYS: 365
 # - quick: 快速摘要，约200-300字，成本最低
 # - comprehensive: 全面分析，约400-600字，平衡性能与成本（默认）
 # - detailed: 详细剖析，约600-900字，成本最高
-ANALYSIS_TYPE: "comprehensive"
+ANALYSIS_TYPE: "quick"
 
 # ==============================================================================
 # 性能与API调用配置 (Performance & API Call Configuration)
@@ -63,10 +63,10 @@ STAGE_ANALYSIS:
   STAGE1:
     WINDOW_SIZE: 10 # How many papers in one ranking batch
     STEP_SIZE: 5      # How many papers to slide the window by
-    PROMOTION_SCORE_THRESHOLD: 4.0 # Minimum score to pass to Stage 2
+    PROMOTION_SCORE_THRESHOLD: 3.5 # Minimum score to pass to Stage 2
 
   # Stage 2: Deep analysis for top papers
   STAGE2:
     # Maximum number of top papers to analyze in detail.
     # This acts as a cost control mechanism.
-    MAX_PAPERS_TO_ANALYZE: 15 
+    MAX_PAPERS_TO_ANALYZE: 20 
