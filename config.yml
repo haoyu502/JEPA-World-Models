@@ -69,4 +69,4 @@ STAGE_ANALYSIS:
   STAGE2:
     # Maximum number of top papers to analyze in detail.
     # This acts as a cost control mechanism.
-    MAX_PAPERS_TO_ANALYZE: 20 
+    MAX_PAPERS_TO_ANALYZE: 50 
