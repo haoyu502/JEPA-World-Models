@@ -59,12 +59,20 @@ class ArxivClient:
         end_date_str = today_utc.strftime("%Y%m%d")
         logger.info(f"ArxivClient: Calculated date range for query: start_date_str = {start_date_str}, end_date_str = {end_date_str}")
 
-        # 创建查询字符串
-        category_query = " OR ".join([f"cat:{cat}" for cat in self.categories])
+        my_keywords = ["World Model", "JEPA", "Representation Learning"]
+        keyword_query = "(" + " OR ".join([f'abs:"{kw}"' for kw in my_keywords]) + ")"
+        category_query = "(" + " OR ".join([f"cat:{cat}" for cat in self.categories]) + ")"
         date_range = f"submittedDate:[{start_date_str}000000 TO {end_date_str}235959]"
-        query = f"({category_query}) AND {date_range}"
+        query = f"{category_query} AND {keyword_query} AND {date_range}"
 
         logger.info(f"正在搜索论文，查询条件: {query}")
+        
+        # 创建查询字符串
+        # category_query = " OR ".join([f"cat:{cat}" for cat in self.categories])
+        # date_range = f"submittedDate:[{start_date_str}000000 TO {end_date_str}235959]"
+        # query = f"({category_query}) AND {date_range}"
+
+        # logger.info(f"正在搜索论文，查询条件: {query}")
 
         # 搜索ArXiv
         search = arxiv.Search(
