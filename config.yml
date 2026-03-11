@@ -33,7 +33,7 @@ ENABLE_PARALLEL: true
 MAX_WORKERS: 0
 
 # 在并行模式下，每批处理的论文数量
-BATCH_SIZE: 20
+BATCH_SIZE: 50
 
 # API调用失败时的重试次数
 API_RETRY_TIMES: 3
