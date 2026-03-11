@@ -8,10 +8,10 @@
 CATEGORIES: "cs.CV,cs.AI"
 
 # 每个类别最多获取的论文数量
-MAX_PAPERS: 50
+MAX_PAPERS: 1000
 
 # 搜索最近几天的论文（设置为1表示只查询今天，周末通过cron自动停止）
-SEARCH_DAYS: 1
+SEARCH_DAYS: 365
 
 # ==============================================================================
 # AI分析配置 (AI Analysis Configuration)
@@ -63,10 +63,10 @@ STAGE_ANALYSIS:
   STAGE1:
     WINDOW_SIZE: 10 # How many papers in one ranking batch
     STEP_SIZE: 5      # How many papers to slide the window by
-    PROMOTION_SCORE_THRESHOLD: 3.5 # Minimum score to pass to Stage 2
+    PROMOTION_SCORE_THRESHOLD: 4.0 # Minimum score to pass to Stage 2
 
   # Stage 2: Deep analysis for top papers
   STAGE2:
     # Maximum number of top papers to analyze in detail.
     # This acts as a cost control mechanism.
-    MAX_PAPERS_TO_ANALYZE: 20 
+    MAX_PAPERS_TO_ANALYZE: 15 
