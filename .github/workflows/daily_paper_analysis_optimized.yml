@@ -164,7 +164,7 @@ jobs:
         
         # 检查是否有更改
         # git add src/storage/conclusion.md src/logs/ || true
-        git add storage/conclusion.md storage/report.html || true
+        git add storage/conclusion.md || true
         if git diff --staged --quiet; then
           echo "📄 没有更改需要提交"
         else
