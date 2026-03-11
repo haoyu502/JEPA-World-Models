@@ -11,7 +11,7 @@ CATEGORIES: "cs.CV,cs.AI"
 MAX_PAPERS: 50
 
 # 搜索最近几天的论文（设置为1表示只查询今天，周末通过cron自动停止）
-SEARCH_DAYS: 356
+SEARCH_DAYS: 1
 
 # ==============================================================================
 # AI分析配置 (AI Analysis Configuration)
@@ -33,7 +33,7 @@ ENABLE_PARALLEL: true
 MAX_WORKERS: 0
 
 # 在并行模式下，每批处理的论文数量
-BATCH_SIZE: 50
+BATCH_SIZE: 20
 
 # API调用失败时的重试次数
 API_RETRY_TIMES: 3
@@ -69,4 +69,4 @@ STAGE_ANALYSIS:
   STAGE2:
     # Maximum number of top papers to analyze in detail.
     # This acts as a cost control mechanism.
-    MAX_PAPERS_TO_ANALYZE: 50 
+    MAX_PAPERS_TO_ANALYZE: 20 
