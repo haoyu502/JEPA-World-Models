@@ -60,7 +60,7 @@ class ArxivClient:
         logger.info(f"ArxivClient: Calculated date range for query: start_date_str = {start_date_str}, end_date_str = {end_date_str}")
 
         # 1. 定义关键词列表
-        my_keywords = ["JEPA"]
+        my_keywords = ["JEPA","Joint Embedding Predictive Architecture"]
         
         # 2. 构建关键词查询逻辑
         if len(my_keywords) > 1:
