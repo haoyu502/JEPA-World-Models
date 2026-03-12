@@ -20,7 +20,7 @@ SEARCH_DAYS: 1
 # - quick: 快速摘要，约200-300字，成本最低
 # - comprehensive: 全面分析，约400-600字，平衡性能与成本（默认）
 # - detailed: 详细剖析，约600-900字，成本最高
-ANALYSIS_TYPE: "quick"
+ANALYSIS_TYPE: "comprehensive"
 
 # ==============================================================================
 # 性能与API调用配置 (Performance & API Call Configuration)
